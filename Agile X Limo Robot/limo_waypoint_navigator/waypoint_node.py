@@ -71,7 +71,7 @@ if __name__ == '__main__':
         for label, goal in goal_sequence:
             success = False
             for attempt in range(MAX_RETRIES):
-                rospy.loginfo("Sending goal to, attempt {attempt + 1}...")
+                rospy.loginfo("Sending goal")
                 client.send_goal(goal)
                 client.wait_for_result()
 
@@ -85,7 +85,7 @@ if __name__ == '__main__':
                     rospy.logwarn("Attempt {attempt + 1} to reach {label} failed.")
 
             if not success:
-                rospy.logerr("Failed to reach {label} after {MAX_RETRIES} attempts. Aborting.")
+                rospy.logerr("Failed to reach after max attempts. Aborting.")
                 exit(1)
 
     rospy.loginfo("Completed all team navigation steps.")
