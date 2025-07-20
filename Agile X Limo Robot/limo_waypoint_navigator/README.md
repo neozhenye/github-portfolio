@@ -9,11 +9,11 @@ A custom waypoint navigation for the AgileX LIMO robot in ROS Melodic. Helps to 
 ##  Launch Instructions
 
 ```bash
-$ rosrun limo_bringup waypoint_node.py
+rosrun limo_bringup waypoint_node.py
 
 ```
 
 ##  How to check for coordinates
 ```bash
-$  rosrun tf tf_echo /map /base_link
+rosrun tf tf_echo /map /base_link
 ```
